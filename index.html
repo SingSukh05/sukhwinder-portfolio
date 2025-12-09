@@ -115,6 +115,12 @@
 
 <script>
   // Scroll reveal
+  const cursor = document.querySelector('.cursor-glow');
+
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+  });
+  
   const reveals = document.querySelectorAll('.reveal');
   const onScroll = () => {
     reveals.forEach(el => {
