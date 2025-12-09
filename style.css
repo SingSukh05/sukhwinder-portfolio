@@ -11,14 +11,13 @@ body {
   line-height: 1.6;
 }
 
-/* Containers */
 .container {
   max-width: 1000px;
   margin: auto;
   padding: 40px 20px;
 }
 
-/* Header */
+/* HEADER */
 .header {
   background: linear-gradient(135deg, #020617, #0b1220);
   border-bottom: 1px solid #1f2937;
@@ -26,7 +25,7 @@ body {
 
 .header-content {
   text-align: center;
-  padding: 70px 20px;
+  padding: 80px 20px;
 }
 
 .header h1 {
@@ -37,10 +36,9 @@ body {
 
 .subtitle {
   color: #9ca3af;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-/* Links */
 .links a {
   display: inline-block;
   margin: 0 10px;
@@ -57,7 +55,7 @@ body {
   color: #020617;
 }
 
-/* Sections */
+/* SECTIONS */
 .section {
   background: #0b1220;
 }
@@ -67,22 +65,19 @@ body {
 }
 
 .section h2 {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   margin-bottom: 15px;
   color: #22c55e;
 }
 
-.section p {
-  max-width: 800px;
-}
-
-/* Cards */
+/* CARDS */
 .card {
   background: #020617;
   border: 1px solid #1f2937;
   border-radius: 10px;
   padding: 22px;
   margin-top: 20px;
+  transition: all 0.25s ease;
 }
 
 .card h3 {
@@ -93,10 +88,15 @@ body {
 .meta {
   font-size: 0.9rem;
   color: #9ca3af;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-/* Lists */
+.card:hover {
+  border-color: #22c55e;
+  transform: translateY(-3px);
+}
+
+/* LISTS */
 ul {
   padding-left: 20px;
 }
@@ -105,13 +105,12 @@ li {
   margin-bottom: 8px;
 }
 
-/* Skills */
+/* SKILLS */
 .skills {
-  margin-top: 10px;
   color: #d1d5db;
 }
 
-/* Footer */
+/* FOOTER */
 .footer {
   text-align: center;
   padding: 25px;
@@ -121,7 +120,19 @@ li {
   font-size: 0.9rem;
 }
 
-/* Responsive */
+/* ANIMATION */
+.fade {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .header h1 {
     font-size: 2.2rem;
