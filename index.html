@@ -72,9 +72,9 @@
       Automated faculty data collection using Python.
     </p>
     <div class="project-details">
-      <p>Built scraper using Requests and BeautifulSoup.</p>
-      <p>Exported structured data into CSV format.</p>
-      <p>Presented project at Honors course showcase.</p>
+      <p>Built scraper with Requests and BeautifulSoup.</p>
+      <p>Exported structured CSV datasets.</p>
+      <p>Presented at Honors course showcase.</p>
     </div>
   </div>
 
@@ -84,9 +84,9 @@
       Conducted end-to-end cyber threat hunting and attribution.
     </p>
     <div class="project-details">
-      <p>Performed threat hunting using WHOIS, DNS, and IP attribution.</p>
-      <p>Analyzed malware and extracted indicators of compromise.</p>
-      <p>Delivered a detailed threat actor report.</p>
+      <p>Performed WHOIS, DNS, and IP-based investigations.</p>
+      <p>Analyzed malware and extracted IOCs.</p>
+      <p>Produced detailed threat actor reports.</p>
     </div>
   </div>
 
@@ -114,19 +114,19 @@
 </footer>
 
 <script>
-  // Scroll animation
+  // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
-  const animateOnScroll = () => {
+  const onScroll = () => {
     reveals.forEach(el => {
       if (el.getBoundingClientRect().top < window.innerHeight - 120) {
         el.classList.add('visible');
       }
     });
   };
-  window.addEventListener('scroll', animateOnScroll);
-  animateOnScroll();
+  window.addEventListener('scroll', onScroll);
+  onScroll();
 
-  // Project toggle
+  // Project accordion
   function toggleProject(card) {
     card.classList.toggle('active');
   }
