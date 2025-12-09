@@ -14,7 +14,7 @@
     <h1>Sukhwinder Singh</h1>
     <p class="subtitle">Cybersecurity Student • Vulnerability Analyst • IT Systems Intern</p>
     <div class="links">
-      <a href="Resume_2025.pdf" target="_blank">Resume</a>
+      <a href="Resume_2025.pdf" target="_blank">Download Resume</a>
       <a href="mailto:sukhwindersingh0575@gmail.com">Email</a>
       <a href="https://www.linkedin.com/in/sukhwinder-singh-3812062b5" target="_blank">LinkedIn</a>
     </div>
@@ -23,31 +23,31 @@
 
 <main>
 
-<section class="section">
+<section class="section fade">
   <div class="container">
     <h2>About Me</h2>
     <p>
-      I am an Honors Cybersecurity student at Purdue University with strong interest
-      in vulnerability analysis, incident response, and threat intelligence.
-      I enjoy applying hands-on security tools to real-world systems and
-      clearly communicating technical findings.
+      I am an Honors Cybersecurity student at Purdue University with hands-on experience
+      in vulnerability analysis, incident response, and threat intelligence. I enjoy
+      applying security tools to real-world systems and clearly communicating
+      technical findings.
     </p>
   </div>
 </section>
 
-<section class="section alt">
+<section class="section alt fade">
   <div class="container">
     <h2>Education</h2>
     <div class="card">
       <h3>Purdue University – West Lafayette</h3>
-      <p>B.S. Cybersecurity (Honors)</p>
+      <p>Bachelor of Science in Cybersecurity (Honors)</p>
       <p>August 2023 – May 2026</p>
       <p><strong>GPA:</strong> 3.66</p>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section fade">
   <div class="container">
     <h2>Professional Experience</h2>
 
@@ -57,7 +57,7 @@
       <ul>
         <li>Maintained and troubleshot Meta IT systems across hardware and software.</li>
         <li>Supported vulnerability remediation and secure system operations.</li>
-        <li>Documented incidents using Salesforce and internal tools.</li>
+        <li>Documented incidents using Salesforce and internal IT tools.</li>
         <li>Delivered technical demonstrations to non-technical users.</li>
       </ul>
     </div>
@@ -66,7 +66,7 @@
       <h3>Vulnerability Analyst Intern</h3>
       <p class="meta">Lamme KPM Express • Indianapolis, IN • Oct 2024 – Sep 2025</p>
       <ul>
-        <li>Conducted vulnerability assessments on networks and systems.</li>
+        <li>Conducted vulnerability assessments across network and system infrastructure.</li>
         <li>Implemented patch management and configuration hardening.</li>
         <li>Monitored alerts and supported incident response activities.</li>
       </ul>
@@ -76,14 +76,15 @@
       <h3>Cybersecurity Analyst Simulation</h3>
       <p class="meta">Tata Technologies • Jan 2023 – Sep 2024</p>
       <ul>
-        <li>Completed identity & access management focused cybersecurity simulation.</li>
-        <li>Applied cybersecurity best practices aligned with business goals.</li>
+        <li>Completed identity and access management focused cybersecurity simulations.</li>
+        <li>Applied cybersecurity best practices aligned with business requirements.</li>
       </ul>
     </div>
+
   </div>
 </section>
 
-<section class="section alt">
+<section class="section alt fade">
   <div class="container">
     <h2>Projects</h2>
 
@@ -91,32 +92,33 @@
       <h3>Adversary Emulation with Atomic Red Team</h3>
       <ul>
         <li>Emulated MITRE ATT&CK techniques on Ubuntu systems.</li>
-        <li>Detected suspicious activity using Snort and log analysis.</li>
-        <li>Created incident response and recovery strategies.</li>
+        <li>Detected malicious activity using Snort and log analysis.</li>
+        <li>Created incident response and recovery plans.</li>
       </ul>
     </div>
 
     <div class="card">
       <h3>Purdue Engineering Data Scraper (Honors)</h3>
       <ul>
-        <li>Built Python automation using Requests and BeautifulSoup.</li>
-        <li>Scraped Purdue faculty data and stored it in CSV format.</li>
-        <li>Presented project at Honors showcase.</li>
+        <li>Developed Python automation using Requests and BeautifulSoup.</li>
+        <li>Collected faculty data and stored results in CSV format.</li>
+        <li>Presented project in an Honors course showcase.</li>
       </ul>
     </div>
 
     <div class="card">
       <h3>Cyber Threat Intelligence Investigation</h3>
       <ul>
-        <li>Performed threat hunting using WHOIS, DNS, and IP attribution.</li>
-        <li>Conducted malware analysis and extracted IOCs.</li>
-        <li>Produced a detailed threat actor report.</li>
+        <li>Conducted threat hunting using WHOIS, DNS enumeration, and IP attribution.</li>
+        <li>Performed malware analysis and extracted IOCs.</li>
+        <li>Produced detailed threat actor reports.</li>
       </ul>
     </div>
+
   </div>
 </section>
 
-<section class="section">
+<section class="section fade">
   <div class="container">
     <h2>Skills</h2>
     <p class="skills">
@@ -128,7 +130,7 @@
   </div>
 </section>
 
-<section class="section alt">
+<section class="section alt fade">
   <div class="container">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:sukhwindersingh0575@gmail.com">sukhwindersingh0575@gmail.com</a></p>
@@ -140,8 +142,22 @@
 </main>
 
 <footer class="footer">
-  <p>© 2025 Sukhwinder Singh • GitHub Pages</p>
+  <p>© 2025 Sukhwinder Singh • Hosted on GitHub Pages</p>
 </footer>
+
+<script>
+  const fades = document.querySelectorAll('.fade');
+  const reveal = () => {
+    fades.forEach(section => {
+      const top = section.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        section.classList.add('show');
+      }
+    });
+  };
+  window.addEventListener('scroll', reveal);
+  reveal();
+</script>
 
 </body>
 </html>
