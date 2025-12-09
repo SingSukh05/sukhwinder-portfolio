@@ -1,136 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sukhwinder Singh | Cybersecurity Portfolio</title>
+  <title>Sukhwinder Singh</title>
 
-  <!-- Luxury Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="hero reveal">
-  <div class="hero-content">
-    <h1>Sukhwinder Singh</h1>
-    <p class="hero-sub">
-      Cybersecurity Student · Vulnerability Analyst · IT Systems Intern
-    </p>
+<div class="hero">
+  <h1>Sukhwinder Singh</h1>
+  <p class="subtitle">
+    Cybersecurity Student · Vulnerability Analyst · IT Systems Intern
+  </p>
 
-    <div class="hero-actions">
-      <a class="btn primary" href="./resume.pdf" target="_blank">Download Resume</a>
-      <a class="btn" href="mailto:sukhwindersingh0575@gmail.com">Email</a>
-      <a class="btn" href="https://www.linkedin.com/in/sukhwinder-singh-3812062b5" target="_blank">LinkedIn</a>
-    </div>
+  <div class="actions">
+    <a class="btn primary" href="./resume.pdf" target="_blank">Download Resume</a>
+    <a class="btn" href="mailto:sukhwindersingh0575@gmail.com">Email</a>
+    <a class="btn" href="https://www.linkedin.com" target="_blank">LinkedIn</a>
   </div>
-</header>
+</div>
 
-<main>
-
-<section class="section reveal">
+<section>
   <h2>About Me</h2>
   <p>
-    Honors Cybersecurity student at Purdue University with hands-on experience in
-    vulnerability analysis, incident response, and threat intelligence. I enjoy
-    applying security tools to real-world systems while communicating findings clearly.
+    Honors Cybersecurity student at Purdue University with hands-on experience
+    in vulnerability analysis, incident response, and threat intelligence.
   </p>
 </section>
 
-<section class="section glass reveal">
+<section>
   <h2>Education</h2>
   <div class="card">
-    <h3>Purdue University – West Lafayette</h3>
-    <p>Bachelor of Science in Cybersecurity (Honors)</p>
-    <p>Aug 2023 – May 2026</p>
-    <strong>GPA: 3.66</strong>
+    <strong>Purdue University – West Lafayette</strong><br>
+    B.S. in Cybersecurity (Honors)<br>
+    Aug 2023 – May 2026<br>
+    GPA: 3.66
   </div>
 </section>
 
-<section class="section reveal">
+<section>
   <h2>Projects</h2>
 
-  <div class="project-card" onclick="toggleProject(this)">
-    <h3>Adversary Emulation with Atomic Red Team</h3>
-    <p class="project-summary">
-      Simulated real-world attacker behavior using MITRE ATT&CK.
-    </p>
-    <div class="project-details">
-      <p>Emulated ATT&CK techniques on Ubuntu systems.</p>
-      <p>Detected threats using Snort and log analysis.</p>
-      <p>Created incident response and recovery plans.</p>
+  <div class="card project" onclick="this.classList.toggle('active')">
+    <strong>Adversary Emulation with Atomic Red Team</strong><br>
+    Simulated attacker behavior using MITRE ATT&CK.
+    <div class="details">
+      Emulated attacks on Ubuntu systems, detected threats with Snort,
+      and created incident response plans.
     </div>
   </div>
 
-  <div class="project-card" onclick="toggleProject(this)">
-    <h3>Purdue Engineering Data Scraper (Honors)</h3>
-    <p class="project-summary">
-      Automated faculty data collection using Python.
-    </p>
-    <div class="project-details">
-      <p>Built scraper with Requests and BeautifulSoup.</p>
-      <p>Exported structured CSV datasets.</p>
-      <p>Presented at Honors course showcase.</p>
+  <div class="card project" onclick="this.classList.toggle('active')">
+    <strong>Purdue Engineering Data Scraper (Honors)</strong><br>
+    Automated faculty data collection using Python.
+    <div class="details">
+      Built with Requests and BeautifulSoup and exported CSV datasets.
     </div>
   </div>
-
-  <div class="project-card" onclick="toggleProject(this)">
-    <h3>Cyber Threat Intelligence Investigation</h3>
-    <p class="project-summary">
-      Conducted end-to-end cyber threat hunting and attribution.
-    </p>
-    <div class="project-details">
-      <p>Performed WHOIS, DNS, and IP-based investigations.</p>
-      <p>Analyzed malware and extracted IOCs.</p>
-      <p>Produced detailed threat actor reports.</p>
-    </div>
-  </div>
-
 </section>
-
-<section class="section glass reveal">
-  <h2>Skills</h2>
-  <p class="skills">
-    TCP/IP · Snort · pfSense · Kali Linux · Wireshark · Splunk · Nmap · OpenVAS ·
-    Python · SQL · Bash · PowerShell · Active Directory · MITRE ATT&CK
-  </p>
-</section>
-
-<section class="section reveal">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:sukhwindersingh0575@gmail.com">sukhwindersingh0575@gmail.com</a></p>
-  <p>Phone: <a href="tel:+17657921041">+1 (765) 792-1041</a></p>
-  <p>Location: Greenwood, IN</p>
-</section>
-
-</main>
 
 <footer>
-  © 2025 Sukhwinder Singh · GitHub Pages
+  © 2025 Sukhwinder Singh
 </footer>
-
-<script>
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const onScroll = () => {
-    reveals.forEach(el => {
-      if (el.getBoundingClientRect().top < window.innerHeight - 120) {
-        el.classList.add('visible');
-      }
-    });
-  };
-  window.addEventListener('scroll', onScroll);
-  onScroll();
-
-  // Project accordion
-  function toggleProject(card) {
-    card.classList.toggle('active');
-  }
-</script>
 
 </body>
 </html>
